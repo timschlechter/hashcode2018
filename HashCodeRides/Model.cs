@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Diagnostics;
 
 namespace HashCodeRides
 {
@@ -8,6 +8,7 @@ namespace HashCodeRides
         public Ride[] Rides { get; set; }
     }
 
+    [DebuggerDisplay("World {R}x{C} with {F} vehicles and {N} of rides (bonus {B} and {T} steps)")]
     public class World
     {
         public int R { get; set; }
@@ -18,6 +19,7 @@ namespace HashCodeRides
         public int T { get; set; }
     }
 
+    [DebuggerDisplay("Start {a},{b} and end {x},{y} should start {s} and end {f}")]
     public class Ride
     {
         public int RideNumber { get; set; }
@@ -35,6 +37,4 @@ namespace HashCodeRides
         public int M { get; set; }
         public Ride[] R { get; set; }
     }
-
-    
 }

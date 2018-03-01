@@ -13,6 +13,38 @@ namespace HashCodeRides
             }
         }
 
+        public static InFile b_should_be_easy
+        {
+            get
+            {
+                return Parse("b_should_be_easy.in");
+            }
+        }
+
+        public static InFile c_no_hurry
+        {
+            get
+            {
+                return Parse("c_no_hurry.in");
+            }
+        }
+
+        public static InFile d_metropolis
+        {
+            get
+            {
+                return Parse("d_metropolis.in");
+            }
+        }
+
+        public static InFile e_high_bonus
+        {
+            get
+            {
+                return Parse("e_high_bonus.in");
+            }
+        }
+
         public static InFile Parse(string fileName)
         {
             var lines = File.ReadAllLines(fileName);
