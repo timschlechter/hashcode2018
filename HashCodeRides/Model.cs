@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace HashCodeRides
 {
     public class InFile
     {
         public World World { get; set; }
-        public Ride[] Rides { get; set; }
+        public List<Ride> Rides { get; set; }
     }
 
     public class World
@@ -28,12 +29,27 @@ namespace HashCodeRides
         public int y { get; set; }
         public int s { get; set; }
         public int f { get; set; }
+
+        public bool IsTaken { get; set; }
+
+        public int RideLength()
+        {
+            int x = Math.Abs(this.a - this.x);
+            int y = Math.Abs(this.b - this.y);
+
+            return x + y;
+        }
     }
 
     public class Vehicle
     {
         public int M { get; set; }
-        public Ride[] R { get; set; }
+        public List<Ride> R { get; set; }
+
+        public Vehicle()
+        {
+            this.R = new List<Ride>();
+        }
     }
 
     

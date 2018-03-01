@@ -49,7 +49,7 @@ namespace HashCodeRides
             return new InFile
             {
                 World = world,
-                Rides = rides.ToArray()
+                Rides = rides
             };
         }
 
