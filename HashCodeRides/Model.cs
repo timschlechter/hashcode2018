@@ -1,7 +1,13 @@
 ﻿using System;
 
-namespace HashCode
+namespace HashCodeRides
 {
+    public class InFile
+    {
+        public World World { get; set; }
+        public Ride[] Rides { get; set; }
+    }
+
     public class World
     {
         public int R { get; set; }
