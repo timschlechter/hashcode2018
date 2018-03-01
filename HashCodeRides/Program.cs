@@ -8,7 +8,13 @@ namespace HashCodeRides
     {
         static void Main(string[] args)
         {
-            var x = Parser.a_example;
+            var a = Parser.a;
+            var b = Parser.b;
+            var c = Parser.c;
+            var d = Parser.d;
+            var e = Parser.e;
+
+
 
 
             var cars = new List<Vehicle>();

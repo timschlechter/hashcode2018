@@ -5,11 +5,43 @@ namespace HashCodeRides
 {
     public static class Parser
     {
-        public static InFile a_example
+        public static InFile a
         {
             get
             {
                 return Parse("a_example.in");
+            }
+        }
+
+        public static InFile b
+        {
+            get
+            {
+                return Parse("b_should_be_easy.in");
+            }
+        }
+
+        public static InFile c
+        {
+            get
+            {
+                return Parse("c_no_hurry.in");
+            }
+        }
+
+        public static InFile d
+        {
+            get
+            {
+                return Parse("d_metropolis.in");
+            }
+        }
+
+        public static InFile e
+        {
+            get
+            {
+                return Parse("e_high_bonus.in");
             }
         }
 
