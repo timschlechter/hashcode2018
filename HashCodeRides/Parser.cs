@@ -5,7 +5,7 @@ namespace HashCodeRides
 {
     public static class Parser
     {
-        public static InFile a_example
+        public static InFile a
         {
             get
             {
@@ -13,7 +13,7 @@ namespace HashCodeRides
             }
         }
 
-        public static InFile b_should_be_easy
+        public static InFile b
         {
             get
             {
@@ -21,7 +21,7 @@ namespace HashCodeRides
             }
         }
 
-        public static InFile c_no_hurry
+        public static InFile c
         {
             get
             {
@@ -29,7 +29,7 @@ namespace HashCodeRides
             }
         }
 
-        public static InFile d_metropolis
+        public static InFile d
         {
             get
             {
@@ -37,7 +37,7 @@ namespace HashCodeRides
             }
         }
 
-        public static InFile e_high_bonus
+        public static InFile e
         {
             get
             {
