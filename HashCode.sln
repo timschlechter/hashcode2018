@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashCodeRides", "HashCodeRides\HashCodeRides.csproj", "{43CD3A9E-DA68-4951-AA1F-101F417013A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashCodeRides", "HashCodeRides\HashCodeRides.csproj", "{43CD3A9E-DA68-4951-AA1F-101F417013A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashCodeRides.Tests", "HashCodeRides.Tests\HashCodeRides.Tests.csproj", "{171C6E66-D542-4C13-B3F7-897220CB3D0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{43CD3A9E-DA68-4951-AA1F-101F417013A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43CD3A9E-DA68-4951-AA1F-101F417013A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43CD3A9E-DA68-4951-AA1F-101F417013A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171C6E66-D542-4C13-B3F7-897220CB3D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171C6E66-D542-4C13-B3F7-897220CB3D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171C6E66-D542-4C13-B3F7-897220CB3D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171C6E66-D542-4C13-B3F7-897220CB3D0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

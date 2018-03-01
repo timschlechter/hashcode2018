@@ -54,4 +54,10 @@ namespace HashCodeRides
             this.R = new List<Ride>();
         }
     }
+
+    public class VehicleResult
+    {
+        public int M { get; set; }
+        public int[] R { get; set; }
+    }
 }
