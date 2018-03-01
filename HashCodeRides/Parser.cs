@@ -75,6 +75,7 @@ namespace HashCodeRides
                     y = data[3].AsInt(),
                     s = data[4].AsInt(),
                     f = data[5].AsInt(),
+                    RideNumber = i
                 });
             }
 
