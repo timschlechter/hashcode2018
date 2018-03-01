@@ -15,10 +15,15 @@ namespace HashCodeRides
             var e = Parser.e;
 
 
-            var cars = new List<Vehicle>();
-            var sortedRidesByS = a.Rides.OrderBy(r => r.s).ToArray();
+            var filename = b;
 
-            for (int i = 0; i < a.World.F; i++)
+
+
+
+            var cars = new List<Vehicle>();
+            var sortedRidesByS = filename.Rides.OrderBy(r => r.s).ToArray();
+
+            for (int i = 0; i < filename.World.F; i++)
             {
                 cars.Add(new Vehicle());
 
@@ -33,11 +38,20 @@ namespace HashCodeRides
                 {
                     var ride = openRides[j];
 
-                    // check if startime is >= tha current step of car
-                    if (ride.s >= car.R.Sum(r => r.RideLength()))
+                    if (!ride.IsImpossible(car.X, car.Y))
                     {
-                        car.R.Add(ride);
-                        ride.IsTaken = true;
+                        Console.WriteLine(ride.RideNumber);
+                        // check if startime is >= tha current step of car
+                        if (ride.f > Utils.Distance(car.X, car.Y, ride) + ride.RideLength)
+                        {
+                            car.R.Add(ride);
+                            ride.IsTaken = true;
+                        }
+                        else
+                        {
+                            break;
+                        }
+
                     }
                 }
             }

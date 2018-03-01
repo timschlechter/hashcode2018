@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HashCodeRides
 {
@@ -35,12 +36,19 @@ namespace HashCodeRides
 
         public bool IsTaken { get; set; }
 
-        public int RideLength()
-        {
-            int x = Math.Abs(this.a - this.x);
-            int y = Math.Abs(this.b - this.y);
+        public int RideLength {
+            get
+            {
+                int x = Math.Abs(this.a - this.x);
+                int y = Math.Abs(this.b - this.y);
 
-            return x + y;
+                return x + y;
+            }
+        }
+
+        public bool IsImpossible(int carX, int carY)
+        {
+            return Utils.Distance(carX, carY, this) > this.f;
         }
     }
 
@@ -48,6 +56,55 @@ namespace HashCodeRides
     {
         public int M { get; set; }
         public List<Ride> R { get; set; }
+
+        public int X { get
+            {
+                if (!R.Any())
+                    return 0;
+                else
+                    return R.Last().x;
+            }
+        }
+
+        public int Y { get
+            {
+                if (!R.Any())
+                    return 0;
+                else
+                    return R.Last().y;
+            }
+        }
+
+        public int CurrentStep
+        {
+            get
+            {
+                int step = 0;
+
+                if (R.Count == 0)
+                    return step;
+
+                if (R.Count <= 1)
+                {
+                    step += (R[0].a + R[0].b);
+                    step += R[0].RideLength;
+                    return step;
+                }
+
+                for (int i = 0; i < R.Count; i++)
+                {
+                    var curRide = R[i];
+
+                    if (i != 0)
+                    {
+                        var previousRide = R[i - 1];
+                        step += Utils.Distance(curRide, previousRide);
+                    }
+                    step += curRide.RideLength;
+                }
+                return step;
+            }
+        }
 
         public Vehicle()
         {
